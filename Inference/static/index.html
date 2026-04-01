@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KV Cognition | The AI Inference Optimization Gateway</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="nav-container">
+            <span class="kv-neon">KV Cognition</span>
+            <nav>
+                <a href="#product">PRODUCT</a>
+                <a href="#pricing">PRICING</a>
+                <a href="#about">ABOUT</a>
+            </nav>
+            <a href="#demo" class="cta-header">GET STARTED</a>
+        </div>
+    </header>
+    <main>
+        <section class="hero">
+            <h1 class="kv-neon">KV Cognition</h1>
+            <h2>The AI Inference Optimization Gateway</h2>
+        </section>
+        <section class="demo-section">
+            <div class="demo-grid">
+                <div class="demo-card right">
+                    <h3 class="neon">Real-Time Inference Cost Engine</h3>
+                    <div class="demo-subtitle">Estimate cost, throughput, and savings for your LLM workload across GPU clusters.</div>
+                    <div id="cost-demo"></div>
+                </div>
+            </div>
+        </section>
+        <section class="product-about">
+          <div class="product-overview" id="product">
+            <h2 class="kv-neon">Product Overview</h2>
+            <p class="product-desc">KV Cognition is the decision layer for AI inference. Applications send requests to KV Cognition, which routes, batches, and optimizes them for the best cost and performance.</p>
+            <ul class="product-list">
+              <li><span class="checkmark">✔</span> <span class="mono">KV Cache Deduplication:</span> Reuse attention cache for similar prompts using embeddings and Redis.</li>
+              <li><span class="checkmark">✔</span> <span class="mono">Smart Prompt Batching:</span> Group compatible prompts for maximum GPU throughput and efficiency.</li>
+              <li><span class="checkmark">✔</span> <span class="mono">GPU Routing Engine:</span> Route requests to the optimal provider based on cost, latency, and load.</li>
+              <li><span class="checkmark">✔</span> <span class="mono">Cost–Aware Model Selection:</span> Dynamically select models for best cost/performance tradeoff.</li>
+              <li><span class="checkmark">✔</span> <span class="mono">Drop–in Gateway:</span> Seamless integration for LLM inference workloads.</li>
+              <li><span class="checkmark">✔</span> <span class="mono">Real–Time Inference Cost Engine:</span> Live calculation of effective token cost and cluster selection.</li>
+            </ul>
+          </div>
+          <div class="core-capabilities card">
+            <h3>Core Capabilities</h3>
+            <ol>
+              <li><span class="mono">KV Cache Deduplication</span><br><span class="cap-desc">Store prompt hashes in Redis, compute embeddings, and enable cache reuse for similar prompts.</span></li>
+              <li><span class="mono">Smart Prompt Batching</span><br><span class="cap-desc">Batch compatible prompts by size, wait time, and token length for GPU efficiency.</span></li>
+              <li><span class="mono">GPU Routing Engine</span><br><span class="cap-desc">Select provider based on cost, latency, load, and availability.</span></li>
+              <li><span class="mono">Cost–Aware Model Selection</span><br><span class="cap-desc">Choose models dynamically based on latency, cost, and availability.</span></li>
+            </ol>
+          </div>
+        </section>
+        <section class="about-architecture" id="about">
+          <div class="about-block">
+            <h2 class="kv-neon">About KV Cognition</h2>
+            <p class="about-desc">KV Cognition is a next–generation AI inference orchestration layer that sits between your applications and GPU infrastructure. Our mission: maximize tokens per GPU second and minimize inference cost for LLM workloads.</p>
+            <p class="about-detail">KV Cognition intelligently manages request routing, GPU scheduling, KV–cache reuse, model selection, and batch formation. It acts as a drop–in optimization gateway for LLM inference, boosting throughput, reducing cost, and unlocking new levels of efficiency for AI–powered products.</p>
+          </div>
+          <div class="system-arch card">
+            <h3>System Architecture</h3>
+            <pre class="arch-diagram">Application
+↓
+<span class="mono">KV Cognition Inference Router</span>
+↓
+<span class="mono">Inference Providers / GPU Clusters</span></pre>
+            <p class="arch-desc">KV Cognition acts as the decision layer between applications and inference infrastructure, optimizing every request for cost, speed, and GPU utilization.</p>
+          </div>
+        </section>
+        <!-- Pricing page (hidden by default) -->
+        <section class="pricing-page" id="pricing" style="display:none;">
+          <div class="pricing-card card">
+            <h2 class="kv-neon">Pricing</h2>
+            <p class="pricing-desc">KV Cognition charges:<br><span class="mono">~1–3% of optimized inference spend</span></p>
+            <p class="pricing-detail">You only pay for the value we create. Our fee is a small percentage of the cost savings and throughput improvements delivered by KV Cognition’s optimization engine. Contact us for enterprise pricing and custom solutions.</p>
+          </div>
+        </section>
+        <script>
+        // Show pricing page and hide others on nav click
+        document.querySelectorAll('a[href="#pricing"]').forEach(el => {
+          el.addEventListener('click', function(e) {
+            e.preventDefault();
+            document.querySelector('.pricing-page').style.display = 'block';
+            document.querySelector('.product-about').style.display = 'none';
+            document.querySelector('.about-architecture').style.display = 'none';
+            window.scrollTo(0, 0);
+          });
+        });
+        // Restore main sections if not pricing
+        document.querySelectorAll('a[href="#product"],a[href="#about"]').forEach(el => {
+          el.addEventListener('click', function(e) {
+            document.querySelector('.pricing-page').style.display = 'none';
+            document.querySelector('.product-about').style.display = '';
+            document.querySelector('.about-architecture').style.display = '';
+          });
+        });
+        </script>
+    </main>
+    <footer>
+        <p>&copy; 2026 KV Cognition. All rights reserved.</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
