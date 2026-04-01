@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KV Cognition | The AI Inference Optimization Gateway</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="nav-container">
+            <span class="kv-neon">KV Cognition</span>
+            <nav>
+                <a href="#product">PRODUCT</a>
+                <a href="#pricing">PRICING</a>
+                <a href="#about">ABOUT</a>
+            </nav>
+            <a href="#demo" class="cta-header">GET STARTED</a>
+        </div>
+    </header>
+    <main>
+        <section class="hero">
+            <h1 class="kv-neon">KV Cognition</h1>
+            <h2>The AI Inference Optimization Gateway</h2>
+        </section>
+        <section class="demo-section">
+            <div class="demo-grid">
+                <div class="demo-card right">
+                    <h3 class="neon">Real-Time Inference Cost Engine</h3>
+                    <div class="demo-subtitle">Estimate cost, throughput, and savings for your LLM workload across GPU clusters.</div>
+                    <div id="cost-demo"></div>
+                </div>
+            </div>
+        </section>
+        <section class="product-about">
+            <div class="product-overview" id="product">
+                <h2 class="kv-neon">Product Overview</h2>
+                <p>KV Cognition is the decision layer for AI inference. Applications send requests to KV Cognition, which routes, batches, and optimizes them for the best cost and performance.</p>
+                <ul class="product-list">
+                    <li><span class="checkmark">✔</span> KV Cache Deduplication: Reuse attention cache for similar prompts using embeddings and Redis.</li>
+                    <li><span class="checkmark">✔</span> Smart Prompt Batching: Group compatible prompts for maximum GPU throughput and efficiency.</li>
+                    <li><span class="checkmark">✔</span> GPU Routing Engine: Route requests to the optimal provider based on cost, latency, and load.</li>
+                    <li><span class="checkmark">✔</span> Cost-Aware Model Selection: Dynamically select models for best cost/performance tradeoff.</li>
+                    <li><span class="checkmark">✔</span> Drop-in Gateway: Seamless integration for LLM inference workloads.</li>
+                    <li><span class="checkmark">✔</span> Real-Time Inference Cost Engine: Live calculation of effective token cost and cluster selection.</li>
+                </ul>
+            </div>
+            <div class="core-capabilities">
+                <h3>Core Capabilities</h3>
+                <ol>
+                    <li><b>KV Cache Deduplication</b><br>Store prompt hashes in Redis, compute embeddings, and enable cache reuse for similar prompts.</li>
+                    <li><b>Smart Prompt Batching</b><br>Batch compatible prompts by size, wait time, and token length for GPU efficiency.</li>
+                    <li><b>GPU Routing Engine</b><br>Select provider based on cost, latency, load, and availability.</li>
+                    <li><b>Cost-Aware Model Selection</b><br>Choose models dynamically based on latency, cost, and availability.</li>
+                </ol>
+            </div>
+        </section>
+        <section class="about-architecture" id="about">
+            <div class="about-block">
+                <h2 class="kv-neon">About KV Cognition</h2>
+                <p>KV Cognition is a next-generation AI inference orchestration layer that sits between your applications and GPU infrastructure. Our mission: maximize tokens per GPU second and minimize inference cost for LLM workloads.</p>
+                <p class="about-detail">KV Cognition intelligently manages request routing, GPU scheduling, KV-cache reuse, model selection, and batch formation. It acts as a drop-in optimization gateway for LLM inference, boosting throughput, reducing cost, and unlocking new levels of efficiency for AI-powered products.</p>
+            </div>
+            <div class="architecture-block">
+                <h3>System Architecture</h3>
+                <pre class="architecture-diagram">
+Application
+    ↓
+KV Cognition Inference Router
+    ↓
+Inference Providers / GPU Clusters
+                </pre>
+                <p>KV Cognition acts as the decision layer between applications and inference infrastructure, optimizing every request for cost, speed, and GPU utilization.</p>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2026 KV Cognition. All rights reserved.</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
